@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mRunning Test ninetyNine.list.ListSuite : subclass(false, org.scalatest.Suite) with arguments [0m
+[0m[[0minfo[0m] [0mPassed: : Total 12, Failed 0, Errors 0, Passed 8, Skipped 4[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	ninetyNine.list.ListSuite[0m

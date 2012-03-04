@@ -1,0 +1,13 @@
+[0m[[0minfo[0m] [0m[32mListSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- P01. Find the last element of a list[0m[0m
+[0m[[0minfo[0m] [0m[32m- P01. Find the last element of a list recursively[0m[0m
+[0m[[0minfo[0m] [0m[32m- P02. Find the last but one element of a list[0m[0m
+[0m[[0minfo[0m] [0m[32m- P02.1 LastNth of an element of a list[0m[0m
+[0m[[0minfo[0m] [0m[32m- P03. Find the Kth element of a list[0m[0m
+[0m[[0minfo[0m] [0m[32m- P04. Find the number of elements of a list[0m[0m
+[0m[[0minfo[0m] [0m[32m- P05. Reverse a list[0m[0m
+[0m[[0minfo[0m] [0m[32m- P06. Find out whether a list is palindrome[0m[0m
+[0m[[0minfo[0m] [0m[33m- P07. Flatten anested list structure (pending)[0m[0m
+[0m[[0minfo[0m] [0m[33m- P08. Eliminate consecurive duplicates of list elements into sublists (pending)[0m[0m
+[0m[[0minfo[0m] [0m[33m- P09. Pack consecutive duplicates of list elements into sublists (pending)[0m[0m
+[0m[[0minfo[0m] [0m[33m- P10. Run-length encoding of a list (pending)[0m[0m
