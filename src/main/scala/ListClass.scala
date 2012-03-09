@@ -48,7 +48,7 @@ object ListUtil {
   
   def lengthFold[T](xs : List[T]): Int = (0 /: xs) ((c,_) => {  c + 1 })
   
-  def reverse[T](xs : List[T]) : List[T] = (List[T]() /: xs) (( y, ys) => { ys :: y})
+  def reverse[T](xs : List[T]) : List[T] = (List[T]() /: xs) (( ys, y) => { y :: ys})
   
   def isPalindrome[T](xs : List[T]) : Boolean = xs match {
     case Nil => true
@@ -57,5 +57,40 @@ object ListUtil {
     case ( x :: xs ) if (x == xs.last && isPalindrome(xs.init)) => true
     case _ => false
   }
+
+ def flattenR(xs : List[Any]) : List[Any]= xs match {
+    case List() => xs
+    case (x:List[_]) :: xs1 => flattenR(x) ::: flattenR (xs1)
+    case x :: xs1 => x :: flattenR(xs1)
+ }
+
+
+  def flatten(xs : List[Any]) : List[Any] = xs flatMap {
+    case xss : List[_] => flatten (xss)
+    case e => List(e)
+  }
   
+  def compress[T](xs : List[T]) : List[T] = xs match {
+    case Nil => Nil    
+    case x :: xs1   => x :: compress( xs1 dropWhile ( _ == x))
+  }
+
+  /* Programmer Note: FoldLeft won't work, as it builds a reversed list, extra operation would be necessary */
+  def compressFunctional[T](xs : List[T]) : List[T] =  ( xs :\ List[T]() ) ( (x, xs) =>
+        if (xs.isEmpty || xs.head != x) x :: xs
+        else xs
+  )
+
+  def pack[T](xs : List[T]) : List[List[T]] = xs match {
+    case Nil => Nil
+    case xs1 => {
+      val (packed, next) = xs1 span { _ == xs1.head }
+      packed :: pack(next)}
+  }
+  
+  def encode[T](xs : List[T]) : List[(Int,T)] = {
+    pack(xs) map (x => (x.length, x.head))
+  }
+
+
 }

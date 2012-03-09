@@ -12,5 +12,4 @@ scalaVersion := "2.9.1"
 libraryDependencies += "org.scalatest" %% "scalatest" % "1.7.1" % "test"
 
 // append -deprecation to the options passed to the Scala compiler
-scalacOptions += "-deprecation"
-
+scalacOptions ++= Seq("-deprecation","-unchecked")
